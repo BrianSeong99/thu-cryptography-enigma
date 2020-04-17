@@ -57,10 +57,6 @@ def encode(plaintext):
   for char in plaintext:
     encryptedLetter = char
 
-
-
-
-
     if char in alphabet:
       # rotate rotors
       if rotateAndCheckNextRotate(2): # check if need to rotate the second rotor
@@ -74,39 +70,20 @@ def encode(plaintext):
         if plugboardDict[char]!="":
           encryptedLetter = plugboardDict[char]
 
-  
-
       # encrypt
       offset = []
       for i in range(3):
         offset.append(alphabet.index(ringPosition[i]))
   
-
-
-
       for i in range(3):
-    
-    
-    
         encryptedLetter = rotorEncrypt(encryptedLetter, 2-i, offset[2-i])
-      
-  
-  
-  
 
       if encryptedLetter in reflector.keys():
         if reflector[encryptedLetter] != "" :
           encryptedLetter = reflector[encryptedLetter]
       
       for i in range(3):
-    
-    
-    
         encryptedLetter = rotorEncryptReflect(encryptedLetter, i, offset[i])
-      
-  
-  
-  
 
       if encryptedLetter in plugboardDict.keys():
         if plugboardDict[encryptedLetter]!="":
@@ -114,9 +91,6 @@ def encode(plaintext):
       
     ciphertext = ciphertext + encryptedLetter
   return ciphertext
-
-
-
 
 if __name__ == "__main__":
   plaintext = input("enter text to code: ")
