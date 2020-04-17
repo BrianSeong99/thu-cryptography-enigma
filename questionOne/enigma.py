@@ -11,8 +11,6 @@ rotor_notches = ["Q", "E", "V", "J", "Z"]
 reflector = {"A":"Y","Y":"A","B":"R","R":"B","C":"U","U":"C","D":"H","H":"D","E":"Q","Q":"E","F":"S","S":"F","G":"L","L":"G","I":"P","P":"I","J":"X","X":"J","K":"N","N":"K","M":"O","O":"M","T":"Z","Z":"T","V":"W","W":"V"}
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-rotors_in_use = [rotors[0], rotors[1], rotors[2]]
-
 class Enigma:
   def __init__(self, rotors_in_use, ring_position, plugboard):
     self.rotors_in_use = rotors_in_use
@@ -25,7 +23,7 @@ class Enigma:
         self.pb_dict[pair[1]] = pair[0]
 
   def get_rotor(self, index):
-    return rotors[index]
+    return rotors[self.rotors_in_use[index]]
 
   def get_rotor_notch(self, index):
     return rotor_notches[index]
