@@ -35,7 +35,7 @@ class Enigma:
 
   def rotate_and_check_next_rotate(self, index):
     flag = False
-    if self.ring_position[index] == self.get_rotor_notch(index):
+    if self.ring_position[index] == self.get_rotor_notch(self.rotors_in_use[index]):
       flag = True
     self.rotate(index)
     return flag
@@ -93,20 +93,29 @@ class Enigma:
       ciphertext = ciphertext + encryptedLetter
     return ciphertext
 
-# def rejewski_analyse(ciphertext):
-#     rotor_list = list(permutations([0, 1, 2], 3))
-#     start_positions = list(product(alphabet, alphabet, alphabet))
+def rejewski_analyse(ciphertext):
+    rotor_list = list(permutations([0, 1, 2], 3))
+    start_positions = list(product(alphabet, alphabet, alphabet))
     
-#     for rotor_combination in rotor_list:
-#       for start_position in start_positions:
-#         decoded = encode()
+    for rotor_combination in rotor_list:
+      for start_position in start_positions:
+        enigma = Enigma(list(rotor_combination), list(start_position), "")
+        decoded = enigma.encode(ciphertext)
+        if decoded[0]==decoded[3] and decoded[1]==decoded[4] and decoded[2]==decoded[5]:
+          print("Found Rejewski Solution:")
+          print("------------------------")
+          print("Rotors In Use: "+str(rotor_combination))
+          print("Start Position: "+str(start_position))
+          print("Decoded Text: "+str(decoded))
+          print()
+
 
 if __name__ == "__main__":
-  plaintext = input("enter text to code: ")
-  rotors_in_use = [0, 1, 2]
-  ring_position = ["H","D","X"]
-  plugboard = ""
-  enigma = Enigma(rotors_in_use, ring_position, plugboard)
-  ciphertext = enigma.encode(plaintext)
-  print(ciphertext)
-  # rejewski_analyse("abcdf")
+  # plaintext = input("enter text to code: ")
+  # rotors_in_use = [0, 2, 1]
+  # ring_position = ["D","D","T"]
+  # plugboard = ""
+  # enigma = Enigma(rotors_in_use, ring_position, plugboard)
+  # ciphertext = enigma.encode(plaintext)
+  # print(ciphertext)
+  rejewski_analyse("HGABLE")
