@@ -94,7 +94,7 @@ class Enigma:
     return ciphertext
 
 def rejewski_analyse(ciphertext):
-    rotor_list = list(permutations([0, 1, 2], 3))
+    rotor_list = list(permutations([0, 1, 2, 3, 4], 5))
     start_positions = list(product(alphabet, alphabet, alphabet))
     
     for rotor_combination in rotor_list:
@@ -111,11 +111,18 @@ def rejewski_analyse(ciphertext):
 
 
 if __name__ == "__main__":
-  # plaintext = input("enter text to code: ")
-  # rotors_in_use = [0, 2, 1]
-  # ring_position = ["D","D","T"]
-  # plugboard = ""
-  # enigma = Enigma(rotors_in_use, ring_position, plugboard)
-  # ciphertext = enigma.encode(plaintext)
-  # print(ciphertext)
-  rejewski_analyse("HGABLE")
+  selection = input("1: Encrypt\n2: Rejewski\n3: Turing\nYour Operation: ")
+  if selection == "1":
+    plaintext = input("enter text to encode: ")
+    rotors_in_use = [0, 1, 2]
+    ring_position = ["H","D","X"]
+    plugboard = ""
+    enigma = Enigma(rotors_in_use, ring_position, plugboard)
+    ciphertext = enigma.encode(plaintext)
+    print(ciphertext)
+  elif selection == "2":
+    plaintext = input("enter text to decode: ") # HGABLE
+    rejewski_analyse(plaintext)
+  elif selection == "3":
+    plaintext = input("enter text to decode: ")
+    print("turing....")
