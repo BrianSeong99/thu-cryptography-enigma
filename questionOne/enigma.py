@@ -94,7 +94,7 @@ class Enigma:
     return ciphertext
 
 def rejewski_analyse(ciphertext):
-    rotor_list = list(permutations([0, 1, 2, 3, 4], 5))
+    rotor_list = list(permutations([0, 1, 2], 3))
     start_positions = list(product(alphabet, alphabet, alphabet))
     
     for rotor_combination in rotor_list:
@@ -108,6 +108,7 @@ def rejewski_analyse(ciphertext):
           print("Start Position: "+str(start_position))
           print("Decoded Text: "+str(decoded))
           print()
+
 
 
 if __name__ == "__main__":
