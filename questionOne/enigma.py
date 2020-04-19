@@ -1,4 +1,8 @@
 from itertools import permutations, product
+from collections import defaultdict
+from copy import copy
+import random
+import time
 
 rotors = [
   "EKMFLGDQVZNTOWYHXUSPAIBRCJ",
@@ -93,7 +97,8 @@ class Enigma:
       ciphertext = ciphertext + encryptedLetter
     return ciphertext
 
-def rejewski_analyse(ciphertext):
+class Rejewski:
+  def rejewski_analyse(self, ciphertext):
     rotor_list = list(permutations([0, 1, 2], 3))
     start_positions = list(product(alphabet, alphabet, alphabet))
     
@@ -109,10 +114,90 @@ def rejewski_analyse(ciphertext):
           print("Decoded Text: "+str(decoded))
           print()
 
+class Turing:
+  def __init__(self, ciphertext, plaintext):
+    self.rotor_list = list(permutations([0, 1, 2, 3, 4], 3))
+    self.start_positions = list(product(alphabet, alphabet, alphabet))
+    self.plaintext = plaintext
+    self.ciphertext = ciphertext
+    self.rings = []
 
+  def find_chains(self, index, stack):
+    # to find the rings
+    for i in range(len(self.plaintext)):
+      if index == 0:
+        stack.append(i)
+        self.find_chains(index+1, stack)
+        stack.pop()
+      elif self.ciphertext[stack[-1]] == self.plaintext[i]:
+        if i not in stack:
+          stack.append(i)
+          plain_letter = self.plaintext[stack[0]]
+          cipher_letter = self.ciphertext[i]
+          if plain_letter == cipher_letter:
+            self.find_chains(index+1, stack)
+            self.rings.append(copy(stack))
+          else:
+            if index != len(self.plaintext)-1:
+              self.find_chains(index+1, stack)
+          stack.pop()
+
+  def eliminate_duplicates(self):
+    rings = []
+    for ring in self.rings:
+      index_after = ring[0]
+      index_now = 0
+      for index, letter_index in enumerate(ring):
+        if index_after > letter_index:
+          index_now = index
+          index_after = ring[0]
+      a = ring[index_now:]
+      b = ring[1:index_now]
+
+      ring = ring[index_now:] + ring[0:index_now]
+    for a in self.rings:
+      if a not in rings:
+        rings.append(a)
+    self.rings = rings
+
+  def same(self, rotor, start_position, ring, letter):
+    ans = " "
+    current_letter = letter
+    current_position = start_position
+
+    for letter in ring:
+      d = (ord(current_position[2])-ord('A')+letter) % 26
+      current_position = [start_position[0], start_position[1], chr(d+ord('A'))]
+      enigma = Enigma(rotor, current_position, "")
+      current_letter = enigma.encode(current_letter)
+    
+    return letter == current_letter
+
+  def run(self):
+    self.find_chains(0, [])
+    self.eliminate_duplicates()
+
+    for rotor in self.rotor_list:
+      print(rotor)
+      for start_position in self.start_positions:
+        all_ring_true = True
+        for ring in self.rings:
+          for letter in alphabet:
+            if self.same(list(rotor), list(start_position), ring, letter):
+              all_ring_true = False
+              break
+          if not all_ring_true:
+            break
+        if all_ring_true:
+          enigma = Enigma(list(rotor), list(start_position), "")
+          ans = enigma.encode(self.plaintext)
+          if ans == self.ciphertext:
+            return [rotor, start_position]
 
 if __name__ == "__main__":
-  selection = input("1: Encrypt\n2: Rejewski\n3: Turing\nYour Operation: ")
+  
+  selection = input("1: Encrypt\n2: Rejewski\n3: Turing\n4: Turing Random Tests\nYour Operation: ")
+  
   if selection == "1":
     plaintext = input("enter text to encode: ")
     rotors_in_use = [0, 1, 2]
@@ -121,9 +206,54 @@ if __name__ == "__main__":
     enigma = Enigma(rotors_in_use, ring_position, plugboard)
     ciphertext = enigma.encode(plaintext)
     print(ciphertext)
+  
   elif selection == "2":
     plaintext = input("enter text to decode: ") # HGABLE
-    rejewski_analyse(plaintext)
+    analizer = Rejewski()
+    analizer.rejewski_analyse(plaintext)
+  
   elif selection == "3":
-    plaintext = input("enter text to decode: ")
-    print("turing....")
+    ciphertext = "GCGXJKTDCQHIANREQOGMGGZFUQHRX"
+    plaintext = "WEATHERREPORTOFTHEDAYYEAHHAHA"
+    print("cipher text to decode: ", ciphertext)
+    print("enter decoded result: ", plaintext)
+    turing = Turing(ciphertext, plaintext)
+    ans = turing.run()
+    print(ans[0])
+    print(ans[1])
+  
+  elif selection == "4":
+    counter = 0
+    iterations = 20 # random.randint(100, 1000)
+    rotor_list = list(permutations([0, 1, 2, 3, 4], 3))
+    start_positions = list(product(alphabet, alphabet, alphabet))
+    mini_length = 10
+    initial_time = time.time()
+    print()
+    for i in range(mini_length, iterations):
+      rotor_in_use = rotor_list[i%len(rotor_list)]
+      start_position = start_positions[i%len(start_positions)]
+      enigma = Enigma(list(rotor_in_use), list(start_position), "")
+      plaintext = ''.join(random.choice(alphabet) for j in range(i))
+      ciphertext = enigma.encode(plaintext)
+      before_analyze = time.time()
+      print("Iteration: ", i-mini_length)
+      print("------------------")
+      print("Plain Text: ", plaintext)
+      print("Cipher Text: ", ciphertext)
+      print("Rotor In Use: ", list(rotor_in_use))
+      print("Start Position: ", list(start_position))
+      turing = Turing(ciphertext, plaintext)
+      ans = turing.run()
+      if ans[0] == rotor_in_use and ans[1] == start_position:
+        counter = counter + 1
+        print("Correct?: ", True)
+      else:
+        print("Correct?: ", False)
+      print("Analize Time: ", time.time()-before_analyze)
+      print()
+    print()
+    print("--------------------------")
+    print("Totol Correct Rate: ", float(counter / (iterations-mini_length)))
+    print("Total Time: ", time.time()-initial_time)
+
