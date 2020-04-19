@@ -191,7 +191,8 @@ class Turing:
 if __name__ == "__main__":
   
   selection = input("1: Encrypt\n2: Rejewski\n3: Turing\n4: Turing Random Tests\n\nYour Operation: ")
-  
+  print()
+
   if selection == "1":
     plaintext = input("enter text to encode: ")
     rotors_in_use = [0, 1, 2]
@@ -213,17 +214,17 @@ if __name__ == "__main__":
     print("enter decoded result: ", plaintext)
     turing = Turing(ciphertext, plaintext)
     ans = turing.run()
+    print()
     print(ans[0])
     print(ans[1])
   
   elif selection == "4":
     counter = 0
-    iterations = random.randint(50, 150)
+    iterations = random.randint(20, 150)
     rotor_list = list(permutations([0, 1, 2, 3, 4], 3))
     start_positions = list(product(alphabet, alphabet, alphabet))
-    mini_length = random.randint(3, 20)
+    mini_length = random.randint(3, 15)
     initial_time = time.time()
-    print()
     for i in range(mini_length, iterations):
       rotor_in_use = rotor_list[i*i*i*i*i%len(rotor_list)]
       start_position = start_positions[i*i*i*i*i%len(start_positions)]

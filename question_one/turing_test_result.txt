@@ -1,0 +1,147 @@
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_one   master ●  python3 enigma.py
+1: Encrypt
+2: Rejewski
+3: Turing
+4: Turing Random Tests
+
+Your Operation: 4
+
+Iteration:  0
+------------------
+Plain Text:  BZOIZPPT
+Cipher Text:  QGYCHHYS
+Rotor In Use:  [0, 3, 4]
+Start Position:  ['W', 'M', 'I']
+.........
+Correct?:  True
+Analize Time:  12.951818943023682
+
+Iteration:  1
+------------------
+Plain Text:  AAUMMNRNV
+Cipher Text:  OBJZKTBXW
+Rotor In Use:  [0, 4, 1]
+Start Position:  ['J', 'J', 'D']
+..........
+Correct?:  True
+Analize Time:  16.380095958709717
+
+Iteration:  2
+------------------
+Plain Text:  OJCIMXMHGP
+Cipher Text:  WUKXVZXGFM
+Rotor In Use:  [3, 1, 2]
+Start Position:  ['R', 'Y', 'E']
+.........................................
+Correct?:  True
+Analize Time:  80.35590291023254
+
+Iteration:  3
+------------------
+Plain Text:  KFIBRDLJFFD
+Cipher Text:  BANRQPDIXOP
+Rotor In Use:  [0, 4, 3]
+Start Position:  ['E', 'G', 'H']
+............
+Correct?:  True
+Analize Time:  25.26590371131897
+
+Iteration:  4
+------------------
+Plain Text:  DFEYIZKRGNRK
+Cipher Text:  GVYZDRHUJSCW
+Rotor In Use:  [1, 0, 2]
+Start Position:  ['E', 'C', 'M']
+.............
+Correct?:  True
+Analize Time:  27.92346715927124
+
+Iteration:  5
+------------------
+Plain Text:  MEHQKIBXDRNVX
+Cipher Text:  XPAMMHONZFOJQ
+Rotor In Use:  [1, 0, 3]
+Start Position:  ['D', 'G', 'N']
+..............
+Correct?:  True
+Analize Time:  769.1767008304596
+
+Iteration:  6
+------------------
+Plain Text:  WWOCURIZFPXXRC
+Cipher Text:  NCWXDOPPQJZEDD
+Rotor In Use:  [3, 2, 4]
+Start Position:  ['P', 'P', 'O']
+.............................................
+Correct?:  True
+Analize Time:  111.47014117240906
+
+Iteration:  7
+------------------
+Plain Text:  QURBXEFFOTPDOIL
+Cipher Text:  VFERKROMYWARVMD
+Rotor In Use:  [1, 2, 0]
+Start Position:  ['F', 'I', 'T']
+................
+Correct?:  True
+Analize Time:  388.01913499832153
+
+Iteration:  8
+------------------
+Plain Text:  ONXBWUKCGSLZCDHU
+Cipher Text:  QIWMOJQBBLKXWQZN
+Rotor In Use:  [1, 2, 3]
+Start Position:  ['R', 'D', 'W']
+.................
+Correct?:  True
+Analize Time:  47.48336672782898
+
+Iteration:  9
+------------------
+Plain Text:  HGYWHRPFQPLKVIFLX
+Cipher Text:  XTXYRWVNWUUROAWGL
+Rotor In Use:  [1, 2, 4]
+Start Position:  ['U', 'J', 'X']
+..................
+Correct?:  True
+Analize Time:  53.63639283180237
+
+Iteration:  10
+------------------
+Plain Text:  ZVSJZQOKAPGVORPLZQ
+Cipher Text:  DWTTQEHSHIEOEMZKFO
+Rotor In Use:  [4, 0, 1]
+Start Position:  ['N', 'F', 'S']
+.................................................
+Correct?:  False
+Analize Time:  155.03407096862793
+
+Iteration:  11
+------------------
+Plain Text:  ABLLHBDJAPXDPMGZXMD
+Cipher Text:  ZWHYDDWCSCUNVUTKFEA
+Rotor In Use:  [1, 3, 2]
+Start Position:  ['W', 'W', 'P']
+....................
+Correct?:  True
+Analize Time:  67.15555906295776
+
+Iteration:  12
+------------------
+Plain Text:  QJNXBTUDMHCDODAMDKWF
+Cipher Text:  BTGTDAWUGVMYAZXKMJRY
+Rotor In Use:  [1, 3, 4]
+Start Position:  ['B', 'S', 'Y']
+.....................
+Correct?:  True
+Analize Time:  1089.4392628669739
+
+Iteration:  13
+------------------
+Plain Text:  WVKSRDYBDWVLIMHXJNRPO
+Cipher Text:  IQFPEIWOJQFPSRLOKVGLD
+Rotor In Use:  [1, 4, 0]
+Start Position:  ['J', 'O', 'V']
+......................
+Correct?:  True
+Analize Time:  582.8648953437805
