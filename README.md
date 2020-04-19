@@ -313,3 +313,107 @@ sub = {'A':'v', 'B':'x', 'C':'e', 'D':'b', 'E':'i', 'F':'w', 'G':'a', 'H':'f', '
 i may not be able to grow flowers but my garden produces just as many dead leaves old over shoes pieces of rope and bushels of dead grass as anybodys and today i bought a wheel barrow to help in clearing it up i have always loved and respected the wheel barrow it is the one wheeled vehicle of which i am perfect master
 ```
 
+### b).
+
+重合指数法
+
+m=1 => 0.041
+
+m=2 => 0.038, 0.047
+
+m=3 => 0.055, 0.048, 0.048
+
+m=4 => 0.037, 0.043, 0.038, 0.049
+
+m=5 => 0.043,0.043, 0.033, 0.035, 0.043
+
+m=6 => 0.063, 0.084, 0.049, 0.065, 0.043, 0.073
+
+当m=6时与0.65较接近
+
+所以密钥是 2, 17, 24, 15, 19, 14
+
+明文是：
+
+```
+i learned how to calculate the amount of paper needed for a room when i was at school you multiply the square footage of the walls by the cubic contents of the floor and ceiling combined and double it you then allow half the total for openings such as windows and doors then you allow the other half for matching the pattern then you double the whole thing again to give a margin of error and then you order the paper
+```
+
+### c).
+
+统计频数为：
+
+```bash
+FREQUENCY STATS:
+A: 13   B: 21   C: 32   D: 9    E: 14   F: 9    G: 0    H: 1    I: 16   J: 6    K: 20   L: 0    M: 0    N: 1    O: 2    P: 20   Q: 4    R: 12   S: 1    T: 0  U: 6     V: 4    W: 0    X: 2    Y: 1    Z: 4
+```
+
+所以C加密为E
+
+设ax+b(mod 26)
+
+则有4a+b=2(mod 26)，其中4时E的index，2时C的index
+
+其他的字母则直接通过暴力遍历，与上一题的方法类似，也是求到m近似0.065。最后求的密钥19，4
+
+明文是：
+
+```
+o canada
+terre de nos aieux
+ton front est ceint de faeurons glorieux
+car ton bras sait porter lepee
+il sait porter la croix
+ton histoire est une epopee
+des plus brillants exploits
+et ta valeur de foi trempee
+protegera nos foyers et nos droits
+```
+
+### d).
+
+```bash
+FREQUENCY STATS:
+A: 17   B: 17   C: 18   D: 9    E: 21   F: 16   G: 16   H: 17   I: 16   J: 12   K: 13   L: 23   M: 21   N: 4    O: 7    P: 8    Q: 6    R: 15   S: 23   T: 12 U: 12    V: 21   W: 11   X: 9    Y: 22   Z: 7
+```
+
+采用以上的几种方法，最后发现时维吉尼亚加密，结果如下：
+
+key：19, 7, 4, 14, 17, 24
+
+```
+i grew up among slow talkers men in particular who dropped words a few at a time like beans in a hill and when i got to minneapolis where people took a lake wobegon comma to mean the end of a story i couldnt speak a whole sentence in company and was considered not too briaht so i enrolled in a speech couqse taught by orvilles and the founder of reflexive relaxology a self hypnotic technique that enabled a person to speak up to three hundred words per minute
+```
+
+
+
+## Q1.26
+
+### a).
+
+将密文写成m*n的矩阵，随后按行构成明文
+
+### b).
+
+```python
+ciphertext = 'MYAMRARUYIQTENCTORAHROYWDSOYEOUARRGDERNOGW'
+
+def decrypt(m, x, y):
+  plaintext = ""
+  for i in range(m):
+    counter = 0
+    for col in range(y):
+      for row in range(x):
+        plaintext += ciphertext[i*x*y + y*row + col]
+  return plaintext.lower()
+
+print(decrypt(7, 3, 2))
+```
+
+执行结果：
+
+```bash
+python3 q1_26.py
+marymaryquitecontraryhowdoesyourgardengrow
+```
+

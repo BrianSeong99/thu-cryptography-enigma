@@ -1,3 +1,864 @@
+KeyboardInterrupt
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/questionOne   master ●  git status    1 ↵  4471  16:16:00 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   enigma.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/questionOne   master ●  git add -A      ✔  4472  16:16:02 
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/questionOne   master ✚  git commit -m "finished turing"
+[master ecf4776] finished turing
+ 1 file changed, 37 insertions(+), 42 deletions(-)
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/questionOne   master ↑1  git push       ✔  4474  16:16:10 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 740 bytes | 740.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/JinwooSeong/thu-cryptography-enigma.git
+   2f672eb..ecf4776  master -> master
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/questionOne   master  cd ..             ✔  4475  16:16:19 
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma   master  cd question                   ✔  4476  16:16:21 
+cd: no such file or directory: question
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma   master  cd question_two             1 ↵  4477  16:16:24 
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master  git status       ✔  4478  16:16:27 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    ../questionOne/enigma.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../question_one/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ●  git add -A     ✔  4479  16:16:39 
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ✚  git add -A     ✔  4480  16:16:43 
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ✚  git commit -m "changed folder name"
+[master 9c05473] changed folder name
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename {questionOne => question_one}/enigma.py (100%)
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ↑1  git push      ✔  4481  16:16:58 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 297 bytes | 297.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/JinwooSeong/thu-cryptography-enigma.git
+   ecf4776..9c05473  master -> master
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master  python3 q1_5.py  ✔  4482  16:17:04 
+Traceback (most recent call last):
+  File "q1_5.py", line 6, in <module>
+    letter -= ord('A')
+TypeError: unsupported operand type(s) for -=: 'str' and 'int'
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ?  python3 q1_5.py
+Traceback (most recent call last):
+  File "q1_5.py", line 6, in <module>
+    letter -= 'A'
+TypeError: unsupported operand type(s) for -=: 'str' and 'str'
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ?  python3 q1_5.py
+BEEAKFYDJXUQYHYJIQRYHTYJIQFBQDUYJIIKFUHCQD
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ?  python3 q1_5.py
+BEEAKFYDJXUQYHYJIQRYHTYJIQFBQDUYJIIKFUHCQD
+Key:  0
+Traceback (most recent call last):
+  File "q1_5.py", line 12, in <module>
+    plaintext += chr((letter - key) % 26)
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ?  python3 q1_5.py
+BEEAKFYDJXUQYHYJIQRYHTYJIQFBQDUYJIIKFUHCQD
+Key:  0
+plaintext: 
+
+
+
+
+
+
+
+Key:  1
+plaintext: 
+
+
+
+
+
+
+
+Key:  2
+plaintext: 
+
+
+
+Key:  3
+plaintext: 
+
+
+
+
+Key:  4
+plaintext: 
+
+
+
+
+
+
+Key:  5
+plaintext: 
+
+
+
+
+
+
+Key:  6
+plaintext: 
+
+
+
+
+
+
+
+
+Key:  7
+plaintext: 
+
+
+
+
+
+Key:  8
+plaintext: 
+
+
+
+
+
+
+Key:  9
+plaintext: 
+
+
+
+
+
+
+
+Key:  10
+plaintext: 
+
+
+
+
+
+
+
+
+
+
+
+Key:  11
+plaintext: 
+
+
+
+
+
+
+
+
+
+
+Key:  12
+plaintext: 
+
+
+
+
+
+
+Key:  13
+plaintext: 
+
+
+Key:  14
+plaintext: 
+Key:  15
+plaintext: 
+Key:  16
+plaintext: 
+Key:  17
+plaintext: 
+
+
+
+
+
+Key:  18
+plaintext: 
+
+
+
+
+
+
+Key:  19
+plaintext: 
+
+
+
+
+
+
+Key:  20
+plaintext: 
+
+
+Key:  21
+plaintext: 
+
+
+
+
+Key:  22
+plaintext: 
+
+
+
+
+Key:  23
+plaintext: 
+
+
+
+Key:  24
+plaintext: 
+
+Key:  25
+plaintext: 
+
+
+
+
+
+
+
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ?                 ✔  4483  16:32:21 
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ?  python3 q1_5.py
+BEEAKFYDJXUQYHYJIQRYHTYJIQFBQDUYJIIKFUHCQD
+Key:  0
+plaintext: ORRNXSLQWKHDLULWVDELUGLWVDSODQHLWVVXSHUPDQ
+Key:  1
+plaintext: NQQMWRKPVJGCKTKVUCDKTFKVUCRNCPGKVUUWRGTOCP
+Key:  2
+plaintext: MPPLVQJOUIFBJSJUTBCJSEJUTBQMBOFJUTTVQFSNBO
+Key:  3
+plaintext: LOOKUPINTHEAIRITSABIRDITSAPLANEITSSUPERMAN
+Key:  4
+plaintext: KNNJTOHMSGDZHQHSRZAHQCHSRZOKZMDHSRRTODQLZM
+Key:  5
+plaintext: JMMISNGLRFCYGPGRQYZGPBGRQYNJYLCGRQQSNCPKYL
+Key:  6
+plaintext: ILLHRMFKQEBXFOFQPXYFOAFQPXMIXKBFQPPRMBOJXK
+Key:  7
+plaintext: HKKGQLEJPDAWENEPOWXENZEPOWLHWJAEPOOQLANIWJ
+Key:  8
+plaintext: GJJFPKDIOCZVDMDONVWDMYDONVKGVIZDONNPKZMHVI
+Key:  9
+plaintext: FIIEOJCHNBYUCLCNMUVCLXCNMUJFUHYCNMMOJYLGUH
+Key:  10
+plaintext: EHHDNIBGMAXTBKBMLTUBKWBMLTIETGXBMLLNIXKFTG
+Key:  11
+plaintext: DGGCMHAFLZWSAJALKSTAJVALKSHDSFWALKKMHWJESF
+Key:  12
+plaintext: CFFBLGZEKYVRZIZKJRSZIUZKJRGCREVZKJJLGVIDRE
+Key:  13
+plaintext: BEEAKFYDJXUQYHYJIQRYHTYJIQFBQDUYJIIKFUHCQD
+Key:  14
+plaintext: ADDZJEXCIWTPXGXIHPQXGSXIHPEAPCTXIHHJETGBPC
+Key:  15
+plaintext: ZCCYIDWBHVSOWFWHGOPWFRWHGODZOBSWHGGIDSFAOB
+Key:  16
+plaintext: YBBXHCVAGURNVEVGFNOVEQVGFNCYNARVGFFHCREZNA
+Key:  17
+plaintext: XAAWGBUZFTQMUDUFEMNUDPUFEMBXMZQUFEEGBQDYMZ
+Key:  18
+plaintext: WZZVFATYESPLTCTEDLMTCOTEDLAWLYPTEDDFAPCXLY
+Key:  19
+plaintext: VYYUEZSXDROKSBSDCKLSBNSDCKZVKXOSDCCEZOBWKX
+Key:  20
+plaintext: UXXTDYRWCQNJRARCBJKRAMRCBJYUJWNRCBBDYNAVJW
+Key:  21
+plaintext: TWWSCXQVBPMIQZQBAIJQZLQBAIXTIVMQBAACXMZUIV
+Key:  22
+plaintext: SVVRBWPUAOLHPYPAZHIPYKPAZHWSHULPAZZBWLYTHU
+Key:  23
+plaintext: RUUQAVOTZNKGOXOZYGHOXJOZYGVRGTKOZYYAVKXSGT
+Key:  24
+plaintext: QTTPZUNSYMJFNWNYXFGNWINYXFUQFSJNYXXZUJWRFS
+Key:  25
+plaintext: PSSOYTMRXLIEMVMXWEFMVHMXWETPERIMXWWYTIVQER
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ?  python3 q1_5.py
+q1_5.py:5: DeprecationWarning: The binary mode of fromstring is deprecated, as it behaves surprisingly on unicode inputs. Use frombuffer instead
+  asciiCiphertext = np.fromstring(ciphertext, dtype = np.uint8)
+trying key:  0
+plaintext: beeakfydjxuqyhyjiqryhtyjiqfbqduyjiikfuhcqd
+trying key:  1
+plaintext: cffblgzekyvrzizkjrsziuzkjrgcrevzkjjlgvidre
+trying key:  2
+plaintext: dggcmhaflzwsajalkstajvalkshdsfwalkkmhwjesf
+trying key:  3
+plaintext: ehhdnibgmaxtbkbmltubkwbmltietgxbmllnixkftg
+trying key:  4
+plaintext: fiieojchnbyuclcnmuvclxcnmujfuhycnmmojylguh
+trying key:  5
+plaintext: gjjfpkdioczvdmdonvwdmydonvkgvizdonnpkzmhvi
+trying key:  6
+plaintext: hkkgqlejpdawenepowxenzepowlhwjaepooqlaniwj
+trying key:  7
+plaintext: illhrmfkqebxfofqpxyfoafqpxmixkbfqpprmbojxk
+trying key:  8
+plaintext: jmmisnglrfcygpgrqyzgpbgrqynjylcgrqqsncpkyl
+trying key:  9
+plaintext: knnjtohmsgdzhqhsrzahqchsrzokzmdhsrrtodqlzm
+trying key:  10
+plaintext: lookupintheairitsabirditsaplaneitssuperman
+trying key:  11
+plaintext: mpplvqjouifbjsjutbcjsejutbqmbofjuttvqfsnbo
+trying key:  12
+plaintext: nqqmwrkpvjgcktkvucdktfkvucrncpgkvuuwrgtocp
+trying key:  13
+plaintext: orrnxslqwkhdlulwvdeluglwvdsodqhlwvvxshupdq
+trying key:  14
+plaintext: pssoytmrxliemvmxwefmvhmxwetperimxwwytivqer
+trying key:  15
+plaintext: qttpzunsymjfnwnyxfgnwinyxfuqfsjnyxxzujwrfs
+trying key:  16
+plaintext: ruuqavotznkgoxozyghoxjozygvrgtkozyyavkxsgt
+trying key:  17
+plaintext: svvrbwpuaolhpypazhipykpazhwshulpazzbwlythu
+trying key:  18
+plaintext: twwscxqvbpmiqzqbaijqzlqbaixtivmqbaacxmzuiv
+trying key:  19
+plaintext: uxxtdyrwcqnjrarcbjkramrcbjyujwnrcbbdynavjw
+trying key:  20
+plaintext: vyyuezsxdroksbsdcklsbnsdckzvkxosdccezobwkx
+trying key:  21
+plaintext: wzzvfatyespltctedlmtcotedlawlypteddfapcxly
+trying key:  22
+plaintext: xaawgbuzftqmudufemnudpufembxmzqufeegbqdymz
+trying key:  23
+plaintext: ybbxhcvagurnvevgfnoveqvgfncynarvgffhcrezna
+trying key:  24
+plaintext: zccyidwbhvsowfwhgopwfrwhgodzobswhggidsfaob
+trying key:  25
+plaintext: addzjexciwtpxgxihpqxgsxihpeapctxihhjetgbpc
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ?  python3 q1_5.py
+BEEAKFYDJXUQYHYJIQRYHTYJIQFBQDUYJIIKFUHCQD
+Key:  0
+plaintext: ORRNXSLQWKHDLULWVDELUGLWVDSODQHLWVVXSHUPDQ
+Key:  1
+plaintext: NQQMWRKPVJGCKTKVUCDKTFKVUCRNCPGKVUUWRGTOCP
+Key:  2
+plaintext: MPPLVQJOUIFBJSJUTBCJSEJUTBQMBOFJUTTVQFSNBO
+Key:  3
+plaintext: LOOKUPINTHEAIRITSABIRDITSAPLANEITSSUPERMAN
+Key:  4
+plaintext: KNNJTOHMSGDZHQHSRZAHQCHSRZOKZMDHSRRTODQLZM
+Key:  5
+plaintext: JMMISNGLRFCYGPGRQYZGPBGRQYNJYLCGRQQSNCPKYL
+Key:  6
+plaintext: ILLHRMFKQEBXFOFQPXYFOAFQPXMIXKBFQPPRMBOJXK
+Key:  7
+plaintext: HKKGQLEJPDAWENEPOWXENZEPOWLHWJAEPOOQLANIWJ
+Key:  8
+plaintext: GJJFPKDIOCZVDMDONVWDMYDONVKGVIZDONNPKZMHVI
+Key:  9
+plaintext: FIIEOJCHNBYUCLCNMUVCLXCNMUJFUHYCNMMOJYLGUH
+Key:  10
+plaintext: EHHDNIBGMAXTBKBMLTUBKWBMLTIETGXBMLLNIXKFTG
+Key:  11
+plaintext: DGGCMHAFLZWSAJALKSTAJVALKSHDSFWALKKMHWJESF
+Key:  12
+plaintext: CFFBLGZEKYVRZIZKJRSZIUZKJRGCREVZKJJLGVIDRE
+Key:  13
+plaintext: BEEAKFYDJXUQYHYJIQRYHTYJIQFBQDUYJIIKFUHCQD
+Key:  14
+plaintext: ADDZJEXCIWTPXGXIHPQXGSXIHPEAPCTXIHHJETGBPC
+Key:  15
+plaintext: ZCCYIDWBHVSOWFWHGOPWFRWHGODZOBSWHGGIDSFAOB
+Key:  16
+plaintext: YBBXHCVAGURNVEVGFNOVEQVGFNCYNARVGFFHCREZNA
+Key:  17
+plaintext: XAAWGBUZFTQMUDUFEMNUDPUFEMBXMZQUFEEGBQDYMZ
+Key:  18
+plaintext: WZZVFATYESPLTCTEDLMTCOTEDLAWLYPTEDDFAPCXLY
+Key:  19
+plaintext: VYYUEZSXDROKSBSDCKLSBNSDCKZVKXOSDCCEZOBWKX
+Key:  20
+plaintext: UXXTDYRWCQNJRARCBJKRAMRCBJYUJWNRCBBDYNAVJW
+Key:  21
+plaintext: TWWSCXQVBPMIQZQBAIJQZLQBAIXTIVMQBAACXMZUIV
+Key:  22
+plaintext: SVVRBWPUAOLHPYPAZHIPYKPAZHWSHULPAZZBWLYTHU
+Key:  23
+plaintext: RUUQAVOTZNKGOXOZYGHOXJOZYGVRGTKOZYYAVKXSGT
+Key:  24
+plaintext: QTTPZUNSYMJFNWNYXFGNWINYXFUQFSJNYXXZUJWRFS
+Key:  25
+plaintext: PSSOYTMRXLIEMVMXWEFMVHMXWETPERIMXWWYTIVQER
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ?  python3 q1_5.py
+BEEAKFYDJXUQYHYJIQRYHTYJIQFBQDUYJIIKFUHCQD
+Key:  0
+Traceback (most recent call last):
+  File "q1_5.py", line 12, in <module>
+    plaintext += chr((letter - key) % 26 + ord('A'))
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ?  python3 q1_5.py
+BEEAKFYDJXUQYHYJIQRYHTYJIQFBQDUYJIIKFUHCQD
+Key:  0
+plaintext: ORRNXSLQWKHDLULWVDELUGLWVDSODQHLWVVXSHUPDQ
+Key:  1
+plaintext: NQQMWRKPVJGCKTKVUCDKTFKVUCRNCPGKVUUWRGTOCP
+Key:  2
+plaintext: MPPLVQJOUIFBJSJUTBCJSEJUTBQMBOFJUTTVQFSNBO
+Key:  3
+plaintext: LOOKUPINTHEAIRITSABIRDITSAPLANEITSSUPERMAN
+Key:  4
+plaintext: KNNJTOHMSGDZHQHSRZAHQCHSRZOKZMDHSRRTODQLZM
+Key:  5
+plaintext: JMMISNGLRFCYGPGRQYZGPBGRQYNJYLCGRQQSNCPKYL
+Key:  6
+plaintext: ILLHRMFKQEBXFOFQPXYFOAFQPXMIXKBFQPPRMBOJXK
+Key:  7
+plaintext: HKKGQLEJPDAWENEPOWXENZEPOWLHWJAEPOOQLANIWJ
+Key:  8
+plaintext: GJJFPKDIOCZVDMDONVWDMYDONVKGVIZDONNPKZMHVI
+Key:  9
+plaintext: FIIEOJCHNBYUCLCNMUVCLXCNMUJFUHYCNMMOJYLGUH
+Key:  10
+plaintext: EHHDNIBGMAXTBKBMLTUBKWBMLTIETGXBMLLNIXKFTG
+Key:  11
+plaintext: DGGCMHAFLZWSAJALKSTAJVALKSHDSFWALKKMHWJESF
+Key:  12
+plaintext: CFFBLGZEKYVRZIZKJRSZIUZKJRGCREVZKJJLGVIDRE
+Key:  13
+plaintext: BEEAKFYDJXUQYHYJIQRYHTYJIQFBQDUYJIIKFUHCQD
+Key:  14
+plaintext: ADDZJEXCIWTPXGXIHPQXGSXIHPEAPCTXIHHJETGBPC
+Key:  15
+plaintext: ZCCYIDWBHVSOWFWHGOPWFRWHGODZOBSWHGGIDSFAOB
+Key:  16
+plaintext: YBBXHCVAGURNVEVGFNOVEQVGFNCYNARVGFFHCREZNA
+Key:  17
+plaintext: XAAWGBUZFTQMUDUFEMNUDPUFEMBXMZQUFEEGBQDYMZ
+Key:  18
+plaintext: WZZVFATYESPLTCTEDLMTCOTEDLAWLYPTEDDFAPCXLY
+Key:  19
+plaintext: VYYUEZSXDROKSBSDCKLSBNSDCKZVKXOSDCCEZOBWKX
+Key:  20
+plaintext: UXXTDYRWCQNJRARCBJKRAMRCBJYUJWNRCBBDYNAVJW
+Key:  21
+plaintext: TWWSCXQVBPMIQZQBAIJQZLQBAIXTIVMQBAACXMZUIV
+Key:  22
+plaintext: SVVRBWPUAOLHPYPAZHIPYKPAZHWSHULPAZZBWLYTHU
+Key:  23
+plaintext: RUUQAVOTZNKGOXOZYGHOXJOZYGVRGTKOZYYAVKXSGT
+Key:  24
+plaintext: QTTPZUNSYMJFNWNYXFGNWINYXFUQFSJNYXXZUJWRFS
+Key:  25
+plaintext: PSSOYTMRXLIEMVMXWEFMVHMXWETPERIMXWWYTIVQER
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ?                 ✔  4483  16:34:39 
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ?  python3 q1_5.py
+Traceback (most recent call last):
+  File "q1_5.py", line 7, in <module>
+    print(ord(letter))
+TypeError: ord() expected string of length 1, but int found
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ?  python3 q1_5.py
+66
+69
+69
+65
+75
+70
+89
+68
+74
+88
+85
+81
+89
+72
+89
+74
+73
+81
+82
+89
+72
+84
+89
+74
+73
+81
+70
+66
+81
+68
+85
+89
+74
+73
+73
+75
+70
+85
+72
+67
+81
+68
+Key:  0
+plaintext: ORRNXSLQWKHDLULWVDELUGLWVDSODQHLWVVXSHUPDQ
+
+Key:  1
+plaintext: NQQMWRKPVJGCKTKVUCDKTFKVUCRNCPGKVUUWRGTOCP
+
+Key:  2
+plaintext: MPPLVQJOUIFBJSJUTBCJSEJUTBQMBOFJUTTVQFSNBO
+
+Key:  3
+plaintext: LOOKUPINTHEAIRITSABIRDITSAPLANEITSSUPERMAN
+
+Key:  4
+plaintext: KNNJTOHMSGDZHQHSRZAHQCHSRZOKZMDHSRRTODQLZM
+
+Key:  5
+plaintext: JMMISNGLRFCYGPGRQYZGPBGRQYNJYLCGRQQSNCPKYL
+
+Key:  6
+plaintext: ILLHRMFKQEBXFOFQPXYFOAFQPXMIXKBFQPPRMBOJXK
+
+Key:  7
+plaintext: HKKGQLEJPDAWENEPOWXENZEPOWLHWJAEPOOQLANIWJ
+
+Key:  8
+plaintext: GJJFPKDIOCZVDMDONVWDMYDONVKGVIZDONNPKZMHVI
+
+Key:  9
+plaintext: FIIEOJCHNBYUCLCNMUVCLXCNMUJFUHYCNMMOJYLGUH
+
+Key:  10
+plaintext: EHHDNIBGMAXTBKBMLTUBKWBMLTIETGXBMLLNIXKFTG
+
+Key:  11
+plaintext: DGGCMHAFLZWSAJALKSTAJVALKSHDSFWALKKMHWJESF
+
+Key:  12
+plaintext: CFFBLGZEKYVRZIZKJRSZIUZKJRGCREVZKJJLGVIDRE
+
+Key:  13
+plaintext: BEEAKFYDJXUQYHYJIQRYHTYJIQFBQDUYJIIKFUHCQD
+
+Key:  14
+plaintext: ADDZJEXCIWTPXGXIHPQXGSXIHPEAPCTXIHHJETGBPC
+
+Key:  15
+plaintext: ZCCYIDWBHVSOWFWHGOPWFRWHGODZOBSWHGGIDSFAOB
+
+Key:  16
+plaintext: YBBXHCVAGURNVEVGFNOVEQVGFNCYNARVGFFHCREZNA
+
+Key:  17
+plaintext: XAAWGBUZFTQMUDUFEMNUDPUFEMBXMZQUFEEGBQDYMZ
+
+Key:  18
+plaintext: WZZVFATYESPLTCTEDLMTCOTEDLAWLYPTEDDFAPCXLY
+
+Key:  19
+plaintext: VYYUEZSXDROKSBSDCKLSBNSDCKZVKXOSDCCEZOBWKX
+
+Key:  20
+plaintext: UXXTDYRWCQNJRARCBJKRAMRCBJYUJWNRCBBDYNAVJW
+
+Key:  21
+plaintext: TWWSCXQVBPMIQZQBAIJQZLQBAIXTIVMQBAACXMZUIV
+
+Key:  22
+plaintext: SVVRBWPUAOLHPYPAZHIPYKPAZHWSHULPAZZBWLYTHU
+
+Key:  23
+plaintext: RUUQAVOTZNKGOXOZYGHOXJOZYGVRGTKOZYYAVKXSGT
+
+Key:  24
+plaintext: QTTPZUNSYMJFNWNYXFGNWINYXFUQFSJNYXXZUJWRFS
+
+Key:  25
+plaintext: PSSOYTMRXLIEMVMXWEFMVHMXWETPERIMXWWYTIVQER
+
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ?  python3 q1_5.py
+Key:  0
+plaintext: BEEAKFYDJXUQYHYJIQRYHTYJIQFBQDUYJIIKFUHCQD
+
+Key:  1
+plaintext: CFFBLGZEKYVRZIZKJRSZIUZKJRGCREVZKJJLGVIDRE
+
+Key:  2
+plaintext: DGGCMHAFLZWSAJALKSTAJVALKSHDSFWALKKMHWJESF
+
+Key:  3
+plaintext: EHHDNIBGMAXTBKBMLTUBKWBMLTIETGXBMLLNIXKFTG
+
+Key:  4
+plaintext: FIIEOJCHNBYUCLCNMUVCLXCNMUJFUHYCNMMOJYLGUH
+
+Key:  5
+plaintext: GJJFPKDIOCZVDMDONVWDMYDONVKGVIZDONNPKZMHVI
+
+Key:  6
+plaintext: HKKGQLEJPDAWENEPOWXENZEPOWLHWJAEPOOQLANIWJ
+
+Key:  7
+plaintext: ILLHRMFKQEBXFOFQPXYFOAFQPXMIXKBFQPPRMBOJXK
+
+Key:  8
+plaintext: JMMISNGLRFCYGPGRQYZGPBGRQYNJYLCGRQQSNCPKYL
+
+Key:  9
+plaintext: KNNJTOHMSGDZHQHSRZAHQCHSRZOKZMDHSRRTODQLZM
+
+Key:  10
+plaintext: LOOKUPINTHEAIRITSABIRDITSAPLANEITSSUPERMAN
+
+Key:  11
+plaintext: MPPLVQJOUIFBJSJUTBCJSEJUTBQMBOFJUTTVQFSNBO
+
+Key:  12
+plaintext: NQQMWRKPVJGCKTKVUCDKTFKVUCRNCPGKVUUWRGTOCP
+
+Key:  13
+plaintext: ORRNXSLQWKHDLULWVDELUGLWVDSODQHLWVVXSHUPDQ
+
+Key:  14
+plaintext: PSSOYTMRXLIEMVMXWEFMVHMXWETPERIMXWWYTIVQER
+
+Key:  15
+plaintext: QTTPZUNSYMJFNWNYXFGNWINYXFUQFSJNYXXZUJWRFS
+
+Key:  16
+plaintext: RUUQAVOTZNKGOXOZYGHOXJOZYGVRGTKOZYYAVKXSGT
+
+Key:  17
+plaintext: SVVRBWPUAOLHPYPAZHIPYKPAZHWSHULPAZZBWLYTHU
+
+Key:  18
+plaintext: TWWSCXQVBPMIQZQBAIJQZLQBAIXTIVMQBAACXMZUIV
+
+Key:  19
+plaintext: UXXTDYRWCQNJRARCBJKRAMRCBJYUJWNRCBBDYNAVJW
+
+Key:  20
+plaintext: VYYUEZSXDROKSBSDCKLSBNSDCKZVKXOSDCCEZOBWKX
+
+Key:  21
+plaintext: WZZVFATYESPLTCTEDLMTCOTEDLAWLYPTEDDFAPCXLY
+
+Key:  22
+plaintext: XAAWGBUZFTQMUDUFEMNUDPUFEMBXMZQUFEEGBQDYMZ
+
+Key:  23
+plaintext: YBBXHCVAGURNVEVGFNOVEQVGFNCYNARVGFFHCREZNA
+
+Key:  24
+plaintext: ZCCYIDWBHVSOWFWHGOPWFRWHGODZOBSWHGGIDSFAOB
+
+Key:  25
+plaintext: ADDZJEXCIWTPXGXIHPQXGSXIHPEAPCTXIHHJETGBPC
+
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ?  git status     ✔  4483  16:40:25 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ?  git add -A     ✔  4484  16:40:45 
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ✚  git status     ✔  4485  16:40:47 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   q1_5.py
+
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ✚  git commit -m "finished question 1-5"
+[master 9ea345d] finished question 1-5
+ 1 file changed, 11 insertions(+)
+ create mode 100644 question_two/q1_5.py
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master ↑1  git push      ✔  4487  16:41:09 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 568 bytes | 568.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/JinwooSeong/thu-cryptography-enigma.git
+   9c05473..9ea345d  master -> master
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_two   master  cd ../question_one 
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_one   master ●  python3 enigma.py 
+1: Encrypt
+2: Rejewski
+3: Turing
+4: Turing Random Tests
+
+Your Operation: 2
+enter text to decode: HGABLE 
+Found Rejewski Solution:
+------------------------
+Rotors In Use: (0, 1, 2)
+Start Position: ('B', 'M', 'I')
+Decoded Text: GXOGXO
+
+Found Rejewski Solution:
+------------------------
+Rotors In Use: (0, 2, 1)
+Start Position: ('D', 'D', 'T')
+Decoded Text: LICLIC
+
+Found Rejewski Solution:
+------------------------
+Rotors In Use: (0, 2, 1)
+Start Position: ('Q', 'Q', 'G')
+Decoded Text: AEOAEO
+
+Found Rejewski Solution:
+------------------------
+Rotors In Use: (0, 2, 1)
+Start Position: ('T', 'A', 'U')
+Decoded Text: UDDUDD
+
+Found Rejewski Solution:
+------------------------
+Rotors In Use: (1, 0, 2)
+Start Position: ('D', 'D', 'G')
+Decoded Text: RVRRVR
+
+Found Rejewski Solution:
+------------------------
+Rotors In Use: (1, 0, 2)
+Start Position: ('R', 'J', 'Z')
+Decoded Text: WYSWYS
+
+Found Rejewski Solution:
+------------------------
+Rotors In Use: (1, 2, 0)
+Start Position: ('D', 'A', 'T')
+Decoded Text: SHJSHJ
+
+Found Rejewski Solution:
+------------------------
+Rotors In Use: (1, 2, 0)
+Start Position: ('I', 'E', 'F')
+Decoded Text: CJPCJP
+
+Found Rejewski Solution:
+------------------------
+Rotors In Use: (1, 2, 0)
+Start Position: ('J', 'F', 'F')
+Decoded Text: CJPCJP
+
+Found Rejewski Solution:
+------------------------
+Rotors In Use: (2, 0, 1)
+Start Position: ('B', 'X', 'E')
+Decoded Text: IWJIWJ
+
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_one   master ●  python3 enigma.py
+1: Encrypt
+2: Rejewski
+3: Turing
+4: Turing Random Tests
+
+Your Operation: 3
+
+cipher text to decode:  GCGXJKTDCQHIANREQOGMGGZFUQHRX
+enter decoded result:  WEATHERREPORTOFTHEDAYYEAHHAHA
+.(0, 1, 2)
+('A', 'A', 'B')
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_one   master ●  python3 enigma.py
+1: Encrypt
+2: Rejewski
+3: Turing
+4: Turing Random Tests
+
+Your Operation: 3
+
+cipher text to decode:  GCGXJKTDCQHIANREQOGMGGZFUQHRX
+enter decoded result:  WEATHERREPORTOFTHEDAYYEAHHAHA
+.
+(0, 1, 2)
+('A', 'A', 'B')
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_one   master ●  python3 enigma.py
+1: Encrypt
+2: Rejewski
+3: Turing
+4: Turing Random Tests
+
+Your Operation: 4
+
+Iteration:  0
+------------------
+Plain Text:  QVRLUT
+Cipher Text:  HQIBLW
+Rotor In Use:  [3, 0, 1]
+Start Position:  ['L', 'N', 'C']
+......^CTraceback (most recent call last):
+  File "enigma.py", line 242, in <module>
+    ans = turing.run()
+  File "enigma.py", line 187, in run
+    ans = enigma.encode(self.plaintext)
+  File "enigma.py", line 67, in encode
+    if self.rotate_and_check_next_rotate(2): # check if need to rotate the second rotor
+  File "enigma.py", line 44, in rotate_and_check_next_rotate
+    self.rotate(index)
+  File "enigma.py", line 37, in rotate
+    (alphabet.index(self.ring_position[index])+1) % 26
+KeyboardInterrupt
+ jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_one   master ●  python3 enigma.py
+1: Encrypt
+2: Rejewski
+3: Turing
+4: Turing Random Tests
+
+Your Operation: 4
+
+Iteration:  -5
+------------------
+Plain Text:  OMONZEWJSA
+Cipher Text:  WYRVTFJVDT
+Rotor In Use:  [3, 1, 2]
+Start Position:  ['R', 'Y', 'E']
+.............................^CTraceback (most recent call last):
+  File "enigma.py", line 244, in <module>
+    if ans[0] == rotor_in_use and ans[1] == start_position:
+  File "enigma.py", line 187, in run
+    ans = enigma.encode(self.plaintext)
+  File "enigma.py", line 79, in encode
+    offset = []
+KeyboardInterrupt
  jinwooseong@SEONGJINWOOs-MacBook-Pro  ~/Desktop/School/3-2/MC Modern Cryptography/HW/enigma/question_one   master ●  python3 enigma.py
 1: Encrypt
 2: Rejewski
@@ -145,3 +1006,11 @@ Start Position:  ['J', 'O', 'V']
 ......................
 Correct?:  True
 Analize Time:  582.8648953437805
+
+Iteration:  14
+------------------
+Plain Text:  IGSGVPZWJAYJRAUTEISSDK
+Cipher Text:  WVIWSWEYQYGCONXUPAUNBR
+Rotor In Use:  [4, 1, 2]
+Start Position:  ['F', 'S', 'Q']
+......................
